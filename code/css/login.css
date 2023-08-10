@@ -1,0 +1,70 @@
+.normal-bg {
+    /*
+    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+    */
+    background: linear-gradient(107deg, rgb(2, 108, 223) 27.4%, rgb(0, 255, 255) 92.7%);
+    /*
+    background: radial-gradient(circle at 10% 20%, rgb(238, 56, 56) 0%, rgba(206, 21, 0, 0.92) 90.1%);
+    background-size: 400% 400%;
+    */
+    animation: gradient 7s ease infinite;
+    transition: opacity 0.5s;
+    height: 100vh;
+}
+
+.error-bg {
+    background: radial-gradient(circle at 10% 20%, rgb(238, 56, 56) 0%, rgba(206, 21, 0, 0.92) 90.1%);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+    height: 100vh;
+    transition: opacity 0.5s;
+}
+
+.ok-bg {
+    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#tiles {
+    height: calc(100vh - 1px);
+    width: calc(100vw - 1px);
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.tile {
+    cursor: pointer;
+    position: relative;
+}
+
+.tile:before {
+    background-color: rgba(15, 15, 15);
+    content: "";
+    inset: 0.5px;
+    position: absolute;
+}
+
+.tile:hover:before {
+    background-color: rgb(30, 30, 30);
+}
+
+#loginForum {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(15, 15, 15, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}

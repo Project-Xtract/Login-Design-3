@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link href="../assets/css/tailwind.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+</head>
+
+<body class="flex items-center justify-center">
+    <div class="ok-bg absolute w-full h-full -z-50"></div>
+    <div class="error-bg absolute w-full h-full -z-40" id="error-bg"></div>
+    <div class="normal-bg absolute w-full h-full -z-30" id="normal-bg"></div>
+    <div id="tiles" class="w-full h-full absolute -z-10"></div>
+    <div id="loginForum" class="absolute bg-black border-none text-white z-10 rounded-md">
+        <div class="p-12 ">
+            <h1 class="font-bold text-4xl">Welcome Back!</h1>
+            <form class="pt-5" id="form">
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-base font-medium text-white">Email<span class="text-red-600">*</span></label>
+                    <input type="email" id="email" onfocus="inputFocus(MouseEvent)" class="bg-neutral-900 border border-neutral-800 text-gray-200 text-sm rounded-lg focus:border-neutral-700 block w-full p-2.5" placeholder="example@gmail.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block mb-2 text-base font-medium text-white">Password<span class="text-red-600">*</span></label>
+                    <input type="password" id="password" onfocus="inputFocus(MouseEvent)" class="bg-neutral-900 border border-neutral-800 text-gray-200 text-sm rounded-lg focus:border-neutral-700 block w-full p-2.5" required>
+                </div>
+                <div class="flex content-between">
+                    <div class="flex items-start mb-6">
+                        <div class="flex items-center h-5">
+                            <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required>
+                        </div>
+                        <label for="remember" class="ml-2 text-sm font-medium text-white">Remember me</label>
+                    </div>
+                    <div class="flex items-center mb-6">
+                        <a class="ml-10 text-sm font-medium text-blue-500">Forgot Your Password?</a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center mb-2">Login</button>
+                    <span class="text-center text-sm">or</span>
+                </div>
+                <button type="button" class="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2 w-full justify-center mt-2">
+                    <svg class="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 18 19">
+                        <path fill-rule="evenodd"
+                            d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Sign in with Google
+                </button>
+            </form>
+
+        </div>
+    </div>
+</body>
+<script src="../assets/js/anime.min.js"></script>
+<script src="../js/login.js"></script>
+
+</html>
